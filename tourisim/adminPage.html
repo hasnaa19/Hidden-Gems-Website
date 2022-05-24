@@ -1,0 +1,290 @@
+ <!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript">
+			function changeBg(){
+				var temp=prompt("Please enter the color you want.", "Color Name....");
+				if(temp==null||temp=="Color Name...."){
+					alert("Please Refresh the Page and try again.");
+				}
+				else 
+				{
+				var temp2=confirm("Are you sure you want to change tha Background color to "+temp);
+				}
+				switch (temp2)
+				{
+				case true:
+				{
+				document.getElementById("sidebar").style.backgroundColor = temp;
+				document.getElementById("header").style.backgroundColor = temp;
+				break;
+				}
+				case false: 
+				{
+				document.write("No change will be done");
+				break;
+				}
+			    }
+			}
+			function changeTextColor(){
+				var temp=prompt("Please enter the color you want.", "Color Name....");
+				if(temp==null||temp=="Color Name...."){
+					alert("Please Refresh the Page and try again.");
+				}
+				else 
+				{
+				var temp2=confirm("Are you sure you want to change the Text color to "+temp);
+				}
+				switch (temp2){
+				case true:
+				{
+				document.getElementById("data").style.color = temp;
+				break;
+				}
+				case false:
+				{
+				document.write("No change will be done");
+				break;
+				}
+				}
+			}
+			function changeFontSize(){
+				var temp=prompt("Please enter the Size you want.", "Size Number....");
+				if(temp==null||temp=="Size Number...."){
+					alert("Please Refresh the Page and try again.");
+				}
+				else 
+				{
+				var temp2=confirm("Are you sure you want to change the Font size to "+temp);
+				}
+				switch (temp2)
+				{
+				case true:
+				{
+				document.getElementById("data").style.fontSize = temp;
+				break;
+				}
+				case false:
+				{
+				document.write("No change will be done");
+				break;
+				}
+				}
+			}
+				function write(newname){
+					document.write(newname);
+				}
+		</script>
+		<style>
+			
+			body{
+				margin:0px;
+				border:0px;
+			}
+			#header {
+				width:100% ; 
+				height: 65px;
+				background:#DC7633;
+				color: lightgray;
+				font-size:15px;
+				align-items: center;
+				display: grid;
+			    grid-template-columns: 0.98fr auto;
+			}
+			.searchField{
+				margin-left:35%;
+			}
+			#sidebar{
+				width:200px ; 
+				height:570px;
+				background:#DC7633;
+				color:#2c3e50;
+				float:left;
+			}
+			#data {
+				background-image: url("https://cdn.hipwallpaper.com/m/32/7/H2F9Me.jpg");
+				background-color: gray;
+				height:100% ;
+				width:100%;
+				background-size:cover;
+				background-repeat: no-repeat;
+				background-attachment: fixed;
+				color:white;
+				
+			}		
+			td {
+			border-bottom:1px solid #95a5a6;
+			border-collapse:collapse;
+			padding-top: 30px;
+			font-size:18px;
+			}
+			td:hover{
+				background-color:#f5f5f5 ;
+			}
+			table{
+			padding-left: 10px;
+			}
+		   .changeB{
+				border: none;
+				background :none;
+				cursor:pointer;
+			}
+			.cursor{
+				cursor:pointer;
+			}
+			.addArticle{
+				margin-left: 22%;
+				
+			}
+			h1{
+				align: center;
+				font-family:Brush Script MT;
+				font-size: 60px;
+			}
+			#textarea1{
+				background-color:#E5E8E8 ;
+			}
+			#table2{
+				
+				padding-left:50px;
+			}
+			td#table2:hover{
+				background-color:#99A3A4;
+			}
+			th#table2{
+				border-collapse:collapse;
+				border-radius: 25px;
+				padding-top: 10px;
+				padding-bottom:10px;
+				background:white;
+				color:black;
+				radius:15px;	
+			}
+			td#table2{
+				border-bottom-color:black;
+			}
+		</style>
+	</head>  
+	<body>
+		<header id="header">
+			<div class="searchField">
+				<form>
+					<input type="search" placeholder="Search Pages..." size="60" >
+					<button type="submit" value="submit" >
+					<img src="icons8-search-50.png" width="17" height= "15" alt= "search" /> 
+					</button>
+				 </form>
+			</div>
+
+		</header>
+		
+		<aside id="sidebar">
+			<table>
+				<tr>
+					<th>
+						<img src="icons8-list-50.png" width="20" height= "18" alt= "menu" /> 
+						<b>Admin Page Menu</b>
+					</th>
+				</tr> 
+				<tr>
+					<td>
+						<img src="icons8-restore-down-50.png" width="20" height= "18" alt= "pages" /> 
+						Pages
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<img src="icons8-maximize-window-50.png" width="20" height= "18" alt= "posts" /> 
+						Posts
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<img src="icons8-user-menu-male-50.png" width="20" height= "18" alt= "users" /> 
+						Users
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<details> 
+							<summary class="cursor">Edits</summary>
+							<ul>
+								<li><input type="button" class="changeB" value=" Background" onclick="changeBg()"></li>					
+				            	<li><input type="button" class="changeB" value=" Font color" onclick="changeTextColor()"></li>
+								<li><input type="button" class="changeB" value=" Text size" onclick="changeFontSize()"></li>
+							</ul>
+						</details>	
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<img src="icons8-notification-50.png" width="20" height= "18" alt= "notifications" /> 
+						Notifications
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<img src="icons8-comments-50.jpg" width="20" height= "18" alt= "comment" /> 
+						Comments
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<img src="icons8-increase-50.png" width="20" height= "18" alt= "statistics" /> 
+						Statistics
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<img src="icons8-settings-50.png" width="20" height= "18" alt= "settings" /> 
+						Settings
+					</td>
+				</tr>
+			</table>
+		</aside>
+		
+		<div id="data">	
+		<br>		
+			<div class="webName">
+					<h1 align="center">Hidden Gems</h1>
+			</div>
+			<section class="addArticle">
+			
+				<p><b>Edit Website Name :-</b></p>
+			    <textarea id ="textarea1" rows="3" cols="80" placeholder="Website Name..">
+				</textarea>
+				<input type="button" value="Edit" onclick="write(newName)">
+				
+				<p><b>Add Article :-</b></p>
+				<textarea id ="textarea1" rows="10" cols="100" placeholder="Write your Article....">
+				</textarea>
+				<input type="button" value="Post">
+				
+				<p><b> All Articles :-</b></p>
+				<table id="table2T">
+					<tr id="table2">
+						<th id="table2" align="center" padding-right="20px">Place</th><th id="table2" align="left">Category</th><th id="table2" colspan="2" align="center">Edit/Delete</th>
+					</tr>
+					<tr id="table2">
+						<td id="table2">Gayer Anderson Museum</td><td id="table2">Museums</td><td id="table2">Edit</td><td id="table2">Delete</td>
+					</tr>
+					<tr id="table2">
+						<td id="table2">Coptic Museum</td><td id="table2">Museums</td><td id="table2">Edit</td><td id="table2">Delete</td>
+					</tr>
+					<tr id="table2">
+						<td id="table2">Baron Palace </td><td id="table2">Palaces</td><td id="table2">Edit</td><td id="table2">Delete</td>
+					</tr>
+					<tr id="table2">
+						<td id="table2">Abdeen Palace</td><td id="table2">Palaces/Museums</td><td id="table2">Edit</td><td id="table2">Delete</td>
+					</tr>
+					<tr id="table2">
+						<td id="table2">Luxor</td><td id="table2">Museums</td><td id="table2">Edit</td><td id="table2">Delete</td>
+					</tr>
+					<tr id="table2">
+						<td id="table2">Philae Temple</td><td id="table2">Temples</td><td id="table2">Edit</td><td id="table2">Delete</td>
+					</tr>
+				</table>
+			</section>
+		</div>
+	</body>
+</html>

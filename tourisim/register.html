@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>
+<h1> register form</h1>
+</title>
+<link rel="stylesheet" type="text/css" href="stylereg.css">
+</head>
+
+<script type="text/javascript">
+function checkpassword()
+{
+var valid =true;
+
+var password=form.pass.value;
+var confirmPass=form.confirm.value;
+
+if(document.form.username.value==""){
+alert("Name is empty");
+document.form.username.focus();
+valid=false; }
+
+if (password==confirmPass){
+alert("you are successfully registered")
+document.form.confirm.focus();
+document.form.pass.focus();
+valid=true;
+}
+else if (document.form.email.value=="")
+{
+alert("email is empty");
+document.form.email.focus();
+valid=false;
+}
+else if(document.form.email.value.indexOf("@")==-1||document.form.email.value.indexOf(".")==-1){
+alert("Please Enter valid email, e.g:info@yahoo.com");
+document.form.password.focus();
+valid=false; 
+}
+
+else if (password!=confirmPass){
+document.form.confirm.focus();
+valid=false;
+}
+return valid;
+}
+
+</script>
+
+<body>
+<div class=" register ">
+<h1 class="label " > Registeration </h1>
+<form name="form" action="file:///C:/Users/EX/Desktop/tourisim/login.html" method="post" onSubmit="return checkpassword()">
+<div class=" textbox "> Username</div>
+<input type="text" placeholder="Enter your Name " name="username"/>
+<div class=" textbox "> Email</div>
+<input type="text" placeholder="Enter your email " name="email"/>
+<div class=" textbox "> Password</div>
+<input type="password" placeholder=" Enter Your Password" name="pass"/>
+<div class=" textbox "> Confirm Password </div>
+<input type="password" placeholder=" Enter Your Password again" name="confirm"/>
+
+<button type="submit"  value ="Register" class="btn"  onclick ="checkpassword()">Register</button>
+ <div class="container signin">
+    <p><b>Already have an account?<a href="file:///C:/Users/EX/Desktop/tourisim/login.html">Sign in</a>.</b></p>
+  </div>
+</form>
+</div>
+</body>
+
+</html>

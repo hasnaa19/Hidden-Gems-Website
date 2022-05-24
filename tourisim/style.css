@@ -1,0 +1,59 @@
+body{
+margin: 0;
+padding: 0;
+background: url(wallpaper.jpg) no-repeat;
+background-size: cover;
+}
+
+.container{
+width: 400px;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+color: white;
+}
+
+.container h1{
+float: left;
+font-size: 40px;
+border-bottom: 6px solid #FFFFFF;
+margin-bottom: 50px;
+padding: 13px;
+}
+
+.font{
+width: 100%;
+overflow: hidden;
+font-size: 20px;
+padding: 8px 0;
+margin: 8px 0;
+border-bottom: 2px solid #FFFFFF;
+}
+.font input{
+border: none;
+outline: none;
+background: none;
+color: white;
+font-size: 18px;
+width: 300px;
+float: left;
+margin: 10px;
+}
+
+.font i{
+width: 25px;
+float: left;
+text-align: center;
+}
+
+.submit{
+width: 100%;
+background: none;
+border: 3px solid #FFFFFF;
+color: white;
+padding: 5px;
+font-size: 20px;
+cursor: pointer;
+margin: 12px 0;
+}
